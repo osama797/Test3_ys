@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <!-- <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color> -->
+
+    <color name="light_gray">#c2c7cc</color>
+    <color name="dark_gray">#3d454c</color>
+    <color name="dark_gray_pressed">#373e44</color>
+    <color name="darker_gray">#1f2226</color>
+
+    <color name="color1">#7b7e81</color>
+    <color name="color2">#7e455e</color>
+    <color name="color3">#796e25</color>
+    <color name="color4">#59717c</color>
+   <color name="text_color">#222222</color>
+    <color name="backgroundcolor">#fcfcfc</color>
+    <color name="lightgray">#ededed</color>
+    <color name="deeppurple">#7c4dff</color>
+    <color name="yello">#ffb300</color>
+    <color name="green">#00bfa5</color>
+    <color name="darkblue">#23283a</color>
+    <color name="testcolorblue">#152b38</color>
+    <color name="pink">#fe104d</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="white">#ffffff</color>
+    <color name="jeem_scanner_bg">#5a297c32</color>
+    <color name="color_ysmo">#48b4fc</color>
+
+    <color name="white_gray_end">#ffffffff</color>
+    <color name="white_gray_start">#fff3f6f7</color>
+    <color name="gray">#ff768186</color>
+
+
+ <color name="bggs">#424242</color>
+
+    <color name="colorPrimary">#3F7298</color>
+    <color name="colorPrimaryDark">#3F7298</color>
+    <color name="colorAccent">#3a85bd</color>
+
+
+    <color name="card_bg_color">#f6f6f6</color>
+    <color name="card_bg_dark_color">#0e0e0e</color>
+    <color name="title_text_color">#258bd6</color>
+    <color name="content_text_color">#999da4</color>
+
+
+
+
+
+
+    <color name="appliances_bg_end">#ff6b2b79</color>
+    <color name="appliances_bg_start">#ff90267d</color>
+    <color name="appliances_complain">#ffb979ad</color>
+    <color name="appliances_result_item">#ff90267d</color>
+    <color name="appliances_scanner_bg">#7390267d</color>
+    <color name="appliances_sep_1">#ff6b2b79</color>
+    <color name="appliances_sep_2">#fff3f6f7</color>
+    <color name="appliances_spinner">#33ffffff</color>
+    <color name="appliances_text">#ffbc98b5</color>
+
+    <color name="black">#ff000000</color>
+    <color name="blue">#ff1db0ec</color>
+
+    <color name="brown_shadow">#7187483b</color>
+
+    <color name="colorPrimaryLight">#ffcfd8dc</color>
+
+    <color name="complaint_bg_end">#ff111517</color>
+    <color name="complaint_bg_start">#ff2e3034</color>
+    <color name="default_circle_indicator_fill_color">#00ffffff</color>
+    <color name="default_circle_indicator_page_color">#ffffffff</color>
+    <color name="default_circle_indicator_stroke_color">#ffffffff</color>
+
+    <color name="efficiency">#ff6b2b79</color>
+    <color name="elec_bg">#ff70b548</color>
+    <color name="error_color_material">#fff4511e</color>
+    <color name="fuel_average">#fffff036</color>
+    <color name="fuel_excellent">#ff6cba4f</color>
+    <color name="fuel_good">#ffbed78e</color>
+    <color name="fuel_poor">#fff69333</color>
+    <color name="fuel_v_excellent">#ff38793a</color>
+    <color name="fuel_very_good">#ff8ac87e</color>
+    <color name="fuel_very_poor">#ffd6282f</color>
+    <color name="gray_bg">#ffbababa</color>
+    <color name="gray_separator">#ffd8d8d8</color>
+    <color name="green_bg">#ff3d8c33</color>
+    <color name="green_call">#ff70b548</color>
+    <color name="green_shadow">#ff194c19</color>
+    <color name="green_snackbar">#ff61a117</color>
+    <color name="hijri_date_picker_accent_color">@color/blue</color>
+    <color name="jeem">#ff3f8d38</color>
+    <color name="jeem_bg">#ff70b548</color>
+    <color name="jeem_bg_dark">#ff297c32</color>
+    <color name="jeem_bg_end">#ff70b548</color>
+    <color name="jeem_bg_start">#ff297c32</color>
+    <color name="jeem_sep_1">#ff336c2d</color>
+    <color name="jeem_sep_2">#ff50a147</color>
+    <color name="jeem_text">#ffd4f5c0</color>
+    <color name="lamp">#ffa2333e</color>
+    <color name="lamp_end">#fff84355</color>
+    <color name="lamp_start">#ffa2333e</color>
+    <color name="lamps_scanner_bg">#5af84355</color>
+
+    <color name="no_gps_end">#ff07a145</color>
+    <color name="no_gps_shadow">#ff0a5037</color>
+    <color name="no_gps_start">#ff09b0e9</color>
+    <color name="no_internet_end">#fff0c13f</color>
+    <color name="no_internet_start">#fff44e4f</color>
+    <color name="no_result_end">#ffeb4f40</color>
+    <color name="no_result_shadow">#ff89325a</color>
+    <color name="no_result_start">#ff8f2b7c</color>
+
+    <color name="nv_bg_end">#ff111517</color>
+    <color name="nv_bg_start">#ff272a2e</color>
+    <color name="onboarder_bg_end">#ff076da1</color>
+    <color name="onboarder_bg_start">#08aee7</color>
+
+    <color name="red">#fff44436</color>
+    <color name="red_snackbar">#ffe5523c</color>
+
+    <color name="saso_blue">#ff3667b1</color>
+    <color name="saso_green">#ff005a31</color>
+    <color name="saso_green_transparent">#66005a31</color>
+
+    <color name="separator_gray">#ffd8d8d8</color>
+    <color name="splash_color">#ff004780</color>
+    <color name="stpi_default_circle_color">#ffb3bdc2</color>
+    <color name="stpi_default_line_color">#ffb3bdc2</color>
+    <color name="stpi_default_primary_color">#ff1db0ec</color>
+    <color name="submitted_end">#ff70b548</color>
+    <color name="submitted_start">#ff297c32</color>
+
+   <color name="ef_white">#FFFFFF</color>
+   <color name="ef_grey">#9E9E9E</color>
+   <color name="ef_black_alpha_50">#80000000</color>
+   <color name="ef_black_alpha_aa">#AA000000</color>
+   <color name="ef_teal">#009688</color>
+
+    <color name="tire_end">#ffb5855e</color>
+    <color name="tire_start">#ff785136</color>
+    <color name="tire_text">#fff8e4d4</color>
+    <color name="tire_text_hint">#62f8e4d4</color>
+    <color name="tires">#ff906646</color>
+    <color name="tires_bg">#ffb5855e</color>
+    <color name="tires_scanner_bg">#5a785136</color>
+    <color name="tires_scanner_bg_">#ad232323</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent_balck">#21050505</color>
+    <color name="transparent_white">#ccffffff</color>
+    <color name="vehicle_bg">#ff09b0e9</color>
+    <color name="vehicles">#ff0882b7</color>
+    <color name="vehicles_bg">#5a076da1</color>
+    <color name="vehicles_end">#ff076da1</color>
+    <color name="vehicles_search">#ff146e9e</color>
+    <color name="vehicles_search_result_item">#ff1787b8</color>
+    <color name="vehicles_start">#ff09b0e9</color>
+    <color name="vehicles_text">#ffbdecfd</color>
+    <color name="white_text">#95ffffff</color>
+    <color name="yellow_snackbar">#ffe6bf49</color>
+</resources>

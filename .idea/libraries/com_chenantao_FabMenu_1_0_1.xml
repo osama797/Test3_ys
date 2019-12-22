@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="com.chenantao:FabMenu-1.0.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-4.1-all/bzyivzo6n839fup2jbap0tjew/caches/transforms-1/files-1.1/FabMenu-1.0.1.aar/f9e26fb7b3e233e18db5f2e5190b40a7/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/wrapper/dists/gradle-4.1-all/bzyivzo6n839fup2jbap0tjew/caches/transforms-1/files-1.1/FabMenu-1.0.1.aar/f9e26fb7b3e233e18db5f2e5190b40a7/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-4.1-all/bzyivzo6n839fup2jbap0tjew/caches/modules-2/files-2.1/com.chenantao/FabMenu/1.0.1/517f87086b409d9f5f5567c637166e776eb08edb/FabMenu-1.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

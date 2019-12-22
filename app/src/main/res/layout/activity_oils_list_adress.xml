@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="right"
+    android:background="#3F7298"
+    android:gravity="right"
+    android:layoutDirection="rtl"
+    android:textDirection="rtl"
+    android:orientation="vertical"
+    tools:context=".oils.OilsListAdressActivity"
+    >
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_oils_adress"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/onboarder_bg_end"
+        android:gravity="top|center"
+        android:layoutDirection="rtl"
+        android:paddingTop="10dp"
+        android:textAlignment="center"
+        android:textDirection="rtl">
+
+    </android.support.v7.widget.Toolbar>
+    <TextView
+        android:id="@+id/text_o"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="casual"
+        android:text="دليل زيوت المحركات المسجله لدى الهيئة اليمنية للمواصفات والمقاييس"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:textStyle="bold" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView_oils_adress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        android:background="@color/appliances_sep_2"
+        android:padding="0dp"
+        android:scrollbars="vertical" />
+
+</RelativeLayout>

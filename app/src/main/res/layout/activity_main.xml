@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+
+
+  <!--  <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:clipToPadding="false"
+        android:foregroundGravity="center"
+        android:overScrollMode="never"
+        android:visibility="invisible">
+    </android.support.v4.view.ViewPager> -->
+
+  <include
+      android:id="@+id/include"
+      layout="@layout/content_main"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" />
+
+
+  <com.osm2.test_33.library_CircleMenu.CircleMenu
+      android:id="@+id/circle_menu"
+      android:layout_width="300dp"
+      android:layout_height="300dp"
+      android:layout_alignParentBottom="true"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="300dp" />
+
+  <Button
+      android:id="@+id/btn_com"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentEnd="true"
+      android:layout_alignParentTop="true"
+      android:text="بلغ عن منتج" />
+
+
+  <!-- FABs Menu is the main view. It will contain all the items FABs and it create the menu fab itself
+  <io.github.yavski.fabspeeddial.FabSpeedDial
+      android:id="@+id/fab_speed_dial"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="bottom|start"
+      android:layout_marginLeft="310dp"
+      fab:fabGravity="top_start"
+      fab:fabMenu="@menu/ps"
+      fab:miniFabBackgroundTint="@android:color/white"
+      fab:miniFabDrawableTint="?attr/colorPrimaryDark"
+      fab:miniFabTitleTextColor="?attr/colorPrimaryDark" /> -->
+
+  <!--com.osm2.test_33.activity.CircleMenuLayoutyout
+      android:id="@+id/id_menulayout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginLeft="40dp"
+      android:layout_marginRight="40dp"
+      android:layout_marginTop="250dp"
+      android:background="@drawable/circle_bg3"
+      android:padding="100dp">
+
+com.osm2.test_33.activity.CircleMenuLayoutyout>  -->
+  <!--<ImageView
+      android:id="@+id/img1"
+      android:layout_width="94dp"
+      android:layout_height="94dp"
+      android:layout_marginTop="570dp"
+      android:layout_marginLeft="20dp"
+      android:background="@drawaic_vehicles2cles"
+      android:padding="10dp"
+      android:visibility="invisible" />
+
+  <ImageView
+      android:id="@+id/img2"
+      android:layout_width="94dp"
+      android:layout_height="94dp"
+      android:layout_marginTop="490dp"
+      android:layout_marginLeft="50dp"
+      android:background="@drawable/ic_tires"
+      android:padding="10dp"
+      android:visibility="invisible" />
+ <ImageButton
+      android:id="@+id/btn"
+      android:layout_width="100dp"
+      android:layout_height="100dp"
+      android:layout_alignParentBottom="true"
+      android:layout_centerHorizontal="true"
+      android:layout_marginBottom="157dp"
+      app:srcCompat="@drawable/elec_group" />
+
+  <ImageView
+      android:id="@+id/img3"
+      android:layout_width="94dp"
+      android:layout_height="94dp"
+      android:layout_marginTop="450dp"
+      android:layout_marginLeft="150dp"
+      android:background="@drawable/ic_lighting"
+      android:padding="10dp"
+      android:visibility="invisible" />
+
+  <ImageView
+      android:id="@+id/img4"
+      android:layout_width="94dp"
+      android:layout_height="94dp"
+      android:layout_marginTop="490dp"
+      android:layout_marginLeft="250dp"
+      android:background="@drawaic_gawda2awda"
+      android:padding="10dp"
+      android:visibility="invisible" />
+
+  <ImageView
+      android:id="@+id/img5"
+      android:layout_width="94dp"
+      android:layout_height="94dp"
+      android:layout_marginTop="570dp"
+      android:layout_marginLeft="270dp"
+      android:background="@drawable/ic_elec"
+      android:padding="10dp"
+      android:visibility="invisible" /> -->
+
+
+  <!--   <Button
+         android:id="@+id/btnOrder2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignBaseline="@+id/btnOrder"
+         android:layout_alignBottom="@+id/btnOrder"
+         android:layout_centerHorizontal="true"
+         android:background="@drawable/round2"
+         android:paddingLeft="30dp"
+         android:paddingRight="30dp"
+         android:text="Order Now!"
+         android:textColor="#fff"
+         android:visibility="invisible"
+         tools:ignore="MissingConstraints"
+         tools:layout_editor_absoluteX="121dp"
+         tools:layout_editor_absoluteY="489dp" />
+
+     <Button
+         android:id="@+id/btnOrder"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_alignStart="@+id/btnOrder2"
+         android:layout_marginBottom="20dp"
+         android:background="@drawable/round"
+         android:paddingLeft="30dp"
+         android:paddingRight="30dp"
+         android:text="Order Now!"
+         android:textColor="#fff"
+         android:visibility="invisible"
+         tools:ignore="MissingConstraints"
+         tools:layout_editor_absoluteX="121dp"
+         tools:layout_editor_absoluteY="489dp" /> -->
+
+
+</RelativeLayout>

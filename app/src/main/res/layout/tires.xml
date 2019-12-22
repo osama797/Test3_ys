@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/tires_bg"
+    tools:context=".activity.TiresActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        android:orientation="vertical"
+        android:overScrollMode="never">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="fill_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_alignParentTop="true"
+                android:background="@color/brown_shadow"
+                android:layout_marginTop="@dimen/toolbar_margin_top"
+                android:theme="@style/MyToolbar"  >
+
+                <ImageView
+                    android:id="@+id/img_tool"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/back"
+                    android:foregroundGravity="top|right"
+                    android:layoutDirection="rtl"
+                    android:textDirection="rtl" />
+
+
+        </android.support.v7.widget.Toolbar>
+
+
+        <RelativeLayout
+                android:id="@+id/no_internet_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/wifi_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/wifi" />
+
+                <TextView
+                    android:id="@+id/wifi_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/wifi_icon"
+                    android:layout_marginTop="50.0dip"
+                    android:gravity="center"
+                    android:text="@string/no_wifi_title"
+                    android:textColor="@color/white"
+                    android:textSize="21.0sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/reconnect"
+                    android:layout_width="250.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@id/wifi_text"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="50.0dip"
+                    android:background="@drawable/rounded_white_with_shadow"
+                    android:shadowColor="@color/brown_shadow"
+                    android:text="@string/try_again"
+                    android:textColor="@color/vehicles_search"
+                    android:textSize="18.0sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/not_found"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/no_result_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/no_result"
+                    android:gravity="center"
+                    android:text="@string/not_found"
+                    android:textColor="@color/white"
+                    android:textSize="21.0sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/no_result"
+                    android:layout_width="100.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="73.0dip"
+                    android:src="@drawable/no_result" />
+            </RelativeLayout>
+
+            <android.support.v4.widget.NestedScrollView
+                android:id="@+id/search_container"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@id/toolbar">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/search_car"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/search_your_tire"
+                        android:textColor="@color/white"
+                        android:textSize="20.0sp" />
+
+                    <FrameLayout
+                        android:id="@+id/company_wrapper"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50.0dip"
+                        android:layout_below="@id/search_car"
+                        android:layout_marginTop="15.0dip"
+                        android:background="@drawable/brown_spinner_left"
+                        android:clickable="false">
+
+                        <com.osm2.test_33.widget.ui.TextViewIcon
+                            android:id="@+id/company"
+                            android:layout_width="wrap_content"
+                            android:layout_height="60.0dip"
+                            android:gravity="start|center"
+                            android:hint="@string/manufacture_company"
+                            android:paddingEnd="20.0dip"
+                            android:paddingStart="20.0dip"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/commercial_name_wrapper"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50.0dip"
+                        android:layout_below="@id/company_wrapper"
+                        android:layout_marginTop="15.0dip"
+                        android:background="@drawable/brown_spinner_left"
+                        android:clickable="true">
+
+                        <com.osm2.test_33.widget.ui.TextViewIcon
+                            android:id="@+id/commercial_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50.0dip"
+                            android:gravity="start|center"
+                            android:hint="@string/commercial_name"
+                            android:paddingEnd="20.0dip"
+                            android:paddingStart="20.0dip"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white" />
+                    </FrameLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/tire_size_wrapper"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50.0dip"
+                        android:layout_below="@id/commercial_name_wrapper"
+                        android:layout_marginTop="15.0dip"
+                        android:background="@drawable/brown_bg"
+                        android:clickable="true">
+
+                        <com.osm2.test_33.widget.ui.TextViewIcon
+                            android:id="@+id/tire_size"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50.0dip"
+                            android:gravity="start|center"
+                            android:paddingEnd="20.0dip"
+                            android:paddingStart="20.0dip"
+                            android:text="الحجم"
+                            android:textColor="@color/white" />
+
+                        <ImageView
+                            android:id="@+id/help_tires_size"
+                            android:layout_width="24.0dip"
+                            android:layout_height="24.0dip"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="15.0dip"
+                            android:layout_marginStart="5.0dip"
+                            android:src="@drawable/help_indicator" />
+
+                        <EditText
+                            android:id="@+id/tire_size_year"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_toStartOf="@id/help_tires_size"
+                            android:gravity="center"
+                            android:hint="215"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:maxLength="3"
+                            android:paddingEnd="10.0dip"
+                            android:paddingStart="10.0dip"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/tire_text_hint"
+                            android:textCursorDrawable="@null" />
+
+                        <TextView
+                            android:id="@+id/div"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_toStartOf="@id/tire_size_year"
+                            android:gravity="center_vertical"
+                            android:text=" / "
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/tire_text_hint"
+                            android:textSize="20.0sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/tire_size_M"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_toStartOf="@id/div"
+                            android:gravity="center"
+                            android:hint="65"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:maxLength="3"
+                            android:paddingEnd="10.0dip"
+                            android:paddingStart="10.0dip"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/tire_text_hint"
+                            android:textCursorDrawable="@null" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rim_design_wrapper"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50.0dip"
+                        android:layout_below="@id/tire_size_wrapper"
+                        android:layout_marginTop="15.0dip"
+                        android:background="@drawable/brown_bg"
+                        android:clickable="true">
+
+                        <com.osm2.test_33.widget.ui.TextViewIcon
+                            android:id="@+id/rim_size"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50.0dip"
+                            android:gravity="start|center"
+                            android:paddingEnd="20.0dip"
+                            android:paddingStart="20.0dip"
+                            android:text="@string/rim_size_design"
+                            android:textColor="@color/white" />
+
+                        <ImageView
+                            android:id="@+id/help_rim_size"
+                            android:layout_width="24.0dip"
+                            android:layout_height="24.0dip"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="15.0dip"
+                            android:layout_marginStart="5.0dip"
+                            android:src="@drawable/help_indicator" />
+
+                        <EditText
+                            android:id="@+id/design"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_alignBaseline="@id/rim_size"
+                            android:layout_alignBottom="@id/rim_size"
+                            android:layout_toStartOf="@id/help_rim_size"
+                            android:gravity="center"
+                            android:hint="R"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapCharacters"
+                            android:maxLength="3"
+                            android:paddingEnd="10.0dip"
+                            android:paddingStart="10.0dip"
+                            android:singleLine="true"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/tire_text_hint"
+                            android:textCursorDrawable="@null" />
+
+                        <EditText
+                            android:id="@+id/rim_size_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_toStartOf="@id/design"
+                            android:gravity="center"
+                            android:hint="18"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:maxLength="3"
+                            android:paddingEnd="10.0dip"
+                            android:paddingStart="10.0dip"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/tire_text_hint"
+                            android:textCursorDrawable="@null" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/tire_class_wrapper"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50.0dip"
+                        android:layout_below="@id/rim_design_wrapper"
+                        android:layout_marginTop="15.0dip"
+                        android:background="@drawable/brown_bg"
+                        android:clickable="true">
+
+                        <com.osm2.test_33.widget.ui.TextViewIcon
+                            android:id="@+id/tire_class"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50.0dip"
+                            android:gravity="start|center"
+                            android:paddingEnd="20.0dip"
+                            android:paddingStart="20.0dip"
+                            android:text="@string/tire_class"
+                            android:textColor="@color/white" />
+
+                        <ImageView
+                            android:id="@+id/help_tire_class"
+                            android:layout_width="24.0dip"
+                            android:layout_height="24.0dip"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="15.0dip"
+                            android:layout_marginStart="5.0dip"
+                            android:src="@drawable/help_indicator" />
+
+                        <EditText
+                            android:id="@+id/tire_class_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_toStartOf="@id/help_tire_class"
+                            android:gravity="center"
+                            android:hint="C4"
+                            android:imeOptions="actionNext"
+                            android:maxLength="3"
+                            android:paddingEnd="10.0dip"
+                            android:paddingStart="10.0dip"
+                            android:singleLine="true"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/tire_text_hint"
+                            android:textCursorDrawable="@null" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/speed_rate_wrapper"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50.0dip"
+                        android:layout_below="@id/tire_class_wrapper"
+                        android:layout_marginTop="15.0dip"
+                        android:background="@drawable/brown_bg"
+                        android:clickable="true">
+
+                        <com.osm2.test_33.widget.ui.TextViewIcon
+                            android:id="@+id/speed_rate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50.0dip"
+                            android:gravity="start|center"
+                            android:paddingEnd="20.0dip"
+                            android:paddingStart="20.0dip"
+                            android:text="@string/load_index_speed_rate"
+                            android:textColor="@color/white" />
+
+                        <ImageView
+                            android:id="@+id/help_speed_rate"
+                            android:layout_width="24.0dip"
+                            android:layout_height="24.0dip"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="15.0dip"
+                            android:layout_marginStart="5.0dip"
+                            android:src="@drawable/help_indicator" />
+
+                        <EditText
+                            android:id="@+id/load_index"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_alignParentTop="true"
+                            android:layout_toStartOf="@id/help_speed_rate"
+                            android:gravity="center"
+                            android:hint="108"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:maxLength="3"
+                            android:paddingEnd="10.0dip"
+                            android:paddingStart="10.0dip"
+                            android:singleLine="true"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/tire_text_hint"
+                            android:textCursorDrawable="@null" />
+
+                        <EditText
+                            android:id="@+id/speed_rate_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_toStartOf="@id/load_index"
+                            android:gravity="center"
+                            android:hint="H"
+                            android:imeActionLabel="@string/search"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapCharacters"
+                            android:maxLength="3"
+                            android:paddingEnd="10.0dip"
+                            android:paddingStart="10.0dip"
+                            android:singleLine="true"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/tire_text_hint"
+                            android:textCursorDrawable="@null" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </android.support.v4.widget.NestedScrollView>
+
+            <TextView
+                android:id="@+id/search"
+                android:layout_width="fill_parent"
+                android:layout_height="49.0dip"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="10.0dip"
+                android:background="@drawable/rounded_button_white"
+                android:gravity="center"
+                android:imeOptions="actionSearch"
+                android:text="@string/search"
+                android:textColor="@color/tire_start"
+                android:textSize="16.0sp" />
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

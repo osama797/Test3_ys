@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/white_gray_bg"
+    android:layoutDirection="rtl"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/complain_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10.0dip"
+            android:theme="@style/GrayIconsToolBar" />
+
+        <TextView
+            android:id="@+id/complain"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:layout_marginBottom="30.0dip"
+            android:gravity="center"
+            android:text="complain_product"
+            android:textSize="18.0sp"
+            android:textStyle="bold" />
+
+        <com.badoualy.stepperindicator.StepperIndicator
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/complain"
+            android:layout_marginLeft="32.0dip"
+            android:layout_marginRight="32.0dip"
+            android:clickable="false"
+            app:stpi_lineColor="@color/blue"
+            app:stpi_lineDoneColor="@color/gray"
+            app:stpi_showStepNumberInstead="false"
+            app:stpi_stepCount="5"/>
+        <com.osm2.test_33.widget.ui.NonSwipeAbleViewPager
+            android:id="@+id/pager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/next"
+
+            android:background="@null" />
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="fill_parent"
+            android:layout_height="45.0dip"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="30.0dip"
+            android:layout_marginTop="10.0dip"
+            android:background="@drawable/rounded_button_blue"
+            android:gravity="center"
+            android:text="next"
+            android:textColor="@android:color/white"
+            android:textSize="18.0sp" />
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

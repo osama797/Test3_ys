@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/card_bg_color"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    android:overScrollMode="never"
+    android:padding="@dimen/text_margin">
+
+    <LinearLayout
+        android:id="@+id/lin_main"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/action_button_content_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="42.0dip"
+            android:layout_weight="2.0"
+            android:fontFamily="@font/flat"
+            android:gravity="bottom|center_vertical|center_horizontal|center"
+            android:text="بيانات المنتج"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textColorLink="@color/black"
+            android:textSize="24sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@android:drawable/screen_background_dark" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30.0dip"
+            android:background="@drawable/profile_complaint_fields"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:padding="5.0dip">
+
+            <com.osm2.test_33.widget.ui.TextViewIcon
+                android:layout_width="wrap_content"
+                android:layout_height="50.0dip"
+                android:fontFamily="@font/flat"
+                android:gravity="start|center"
+                android:paddingEnd="10.0dip"
+                android:paddingStart="10.0dip"
+                android:text="العنوان"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:paddingEnd="10.0dip"
+                android:paddingStart="10.0dip"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/tire_text_hint"
+                android:textCursorDrawable="@null" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30.0dip"
+            android:background="@drawable/profile_complaint_fields"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:padding="5.0dip">
+
+            <com.osm2.test_33.widget.ui.TextViewIcon
+
+                android:layout_width="wrap_content"
+                android:layout_height="50.0dip"
+                android:fontFamily="@font/flat"
+                android:gravity="start|center"
+                android:paddingEnd="10.0dip"
+                android:paddingStart="10.0dip"
+                android:text="اسم المنتج"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/name_pro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:paddingEnd="10.0dip"
+                android:paddingStart="10.0dip"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/tire_text_hint"
+                android:textCursorDrawable="@null" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30.0dip"
+            android:background="@drawable/profile_complaint_fields"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:padding="5.0dip">
+
+            <com.osm2.test_33.widget.ui.TextViewIcon
+
+                android:layout_width="wrap_content"
+                android:layout_height="50.0dip"
+                android:fontFamily="@font/flat"
+                android:gravity="start|center"
+                android:paddingEnd="10.0dip"
+                android:paddingStart="10.0dip"
+                android:text="الماركه"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/name_mark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:paddingEnd="10.0dip"
+                android:paddingStart="10.0dip"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/tire_text_hint"
+                android:textCursorDrawable="@null" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30.0dip"
+            android:background="@drawable/profile_complaint_fields"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:padding="5.0dip">
+
+            <com.osm2.test_33.widget.ui.TextViewIcon
+
+                android:layout_width="wrap_content"
+                android:layout_height="50.0dip"
+                android:fontFamily="@font/flat"
+                android:gravity="start|center"
+                android:paddingEnd="10.0dip"
+                android:paddingStart="10.0dip"
+                android:text="بلد المنشأ"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/name_madin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:paddingEnd="10.0dip"
+                android:paddingStart="10.0dip"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/tire_text_hint"
+                android:textCursorDrawable="@null" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30.0dip"
+            android:background="@drawable/profile_complaint_fields"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:padding="5.0dip">
+
+            <com.osm2.test_33.widget.ui.TextViewIcon
+
+                android:layout_width="wrap_content"
+                android:layout_height="50.0dip"
+                android:fontFamily="@font/flat"
+                android:gravity="start|center"
+                android:paddingEnd="10.0dip"
+                android:paddingStart="10.0dip"
+                android:text="اسم الشركة"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/name_company_comm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:paddingEnd="10.0dip"
+                android:paddingStart="10.0dip"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/tire_text_hint"
+                android:textCursorDrawable="@null" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30.0dip"
+            android:background="@drawable/profile_complaint_fields"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:padding="5.0dip">
+
+            <com.osm2.test_33.widget.ui.TextViewIcon
+
+                android:layout_width="wrap_content"
+                android:layout_height="50.0dip"
+                android:fontFamily="@font/flat"
+                android:gravity="start|center"
+                android:paddingEnd="10.0dip"
+                android:paddingStart="10.0dip"
+                android:text="رقم الدفعه"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/name_no_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:paddingEnd="10.0dip"
+                android:paddingStart="10.0dip"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/tire_text_hint"
+                android:textCursorDrawable="@null" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/tire_size_wrapper"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+
+            android:layout_marginTop="15.0dip"
+            android:background="@color/colorPrimaryDark"
+            android:clickable="true">
+
+            <com.osm2.test_33.widget.ui.TextViewIcon
+                android:id="@+id/tire_size"
+                android:layout_width="wrap_content"
+                android:layout_height="50.0dip"
+                android:fontFamily="@font/flat"
+                android:gravity="center"
+                android:paddingEnd="10.0dip"
+                android:paddingStart="10.0dip"
+                android:text="تاريخ الانتاج"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/help_tires_size"
+                android:layout_width="24.0dip"
+                android:layout_height="24.0dip"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15.0dip"
+                android:layout_marginStart="5.0dip"
+                android:src="@drawable/date" />
+
+            <EditText
+                android:id="@+id/tire_size_year"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_toStartOf="@id/help_tires_size"
+                android:gravity="center"
+                android:hint="2019"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="4"
+                android:paddingEnd="10.0dip"
+                android:paddingStart="10.0dip"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/tire_text_hint"
+                android:textCursorDrawable="@null" />
+
+            <TextView
+                android:id="@+id/div"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_toStartOf="@id/tire_size_year"
+                android:gravity="center_vertical"
+                android:text=" / "
+                android:textColor="@color/white"
+                android:textColorHint="@color/tire_text_hint"
+                android:textSize="20.0sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/tire_size_M"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignBaseline="@+id/div"
+                android:layout_alignBottom="@+id/div"
+                android:layout_toStartOf="@id/div"
+
+                android:gravity="center"
+                android:hint="01"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="2"
+                android:paddingEnd="10.0dip"
+                android:paddingStart="10.0dip"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/tire_text_hint"
+                android:textCursorDrawable="@null" />
+
+            <TextView
+                android:id="@+id/div_year"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_toStartOf="@id/tire_size_M"
+                android:gravity="center_vertical"
+                android:text=" / "
+                android:textColor="@color/white"
+                android:textColorHint="@color/tire_text_hint"
+                android:textSize="20.0sp"
+                android:textStyle="bold" />
+
+
+
+            <EditText
+                android:id="@+id/tire_size_day"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_toStartOf="@id/div_year"
+                android:gravity="center"
+                android:hint="1"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="3"
+                android:paddingEnd="10.0dip"
+                android:paddingStart="10.0dip"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/tire_text_hint"
+                android:textCursorDrawable="@null" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/tire_size_wrapper2"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+
+            android:layout_marginTop="15.0dip"
+            android:background="@color/colorPrimaryDark"
+            android:clickable="true">
+
+            <com.osm2.test_33.widget.ui.TextViewIcon
+                android:id="@+id/tire_size2"
+                android:layout_width="wrap_content"
+                android:layout_height="50.0dip"
+                android:fontFamily="@font/flat"
+                android:gravity="center"
+                android:paddingEnd="10.0dip"
+                android:paddingStart="10.0dip"
+                android:text="تاريخ الانتهاء"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/help_tires_size2"
+                android:layout_width="24.0dip"
+                android:layout_height="24.0dip"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15.0dip"
+                android:layout_marginStart="5.0dip"
+                android:src="@drawable/date" />
+
+            <EditText
+                android:id="@+id/tire_size_year2"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_toStartOf="@id/help_tires_size2"
+                android:gravity="center"
+                android:hint="2019"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="4"
+                android:paddingEnd="10.0dip"
+                android:paddingStart="10.0dip"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/tire_text_hint"
+                android:textCursorDrawable="@null" />
+
+            <TextView
+                android:id="@+id/div2"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_toStartOf="@id/tire_size_year2"
+                android:gravity="center_vertical"
+                android:text=" / "
+                android:textColor="@color/white"
+                android:textColorHint="@color/tire_text_hint"
+                android:textSize="20.0sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/tire_size_M2"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_toStartOf="@id/div2"
+                android:gravity="center"
+                android:hint="01"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="2"
+                android:paddingEnd="10.0dip"
+                android:paddingStart="10.0dip"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/tire_text_hint"
+                android:textCursorDrawable="@null" />
+
+            <TextView
+                android:id="@+id/div_year2"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_toStartOf="@id/tire_size_M2"
+                android:gravity="center_vertical"
+                android:text=" / "
+                android:textColor="@color/white"
+                android:textColorHint="@color/tire_text_hint"
+                android:textSize="20.0sp"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/tire_size_day2"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_toStartOf="@id/div_year2"
+                android:gravity="center"
+                android:hint="1"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="3"
+                android:paddingEnd="10.0dip"
+                android:paddingStart="10.0dip"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/tire_text_hint"
+                android:textCursorDrawable="@null" />
+
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@color/bggs" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20.0dip"
+            android:background="@drawable/profile_complaint_fields"
+            android:orientation="horizontal"
+            android:padding="5.0dip">
+
+            <Spinner
+                android:id="@+id/nice_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="42.0dip"
+                android:layout_gravity="start"
+                android:layout_margin="20dp"
+                android:layout_marginEnd="5.0dip"
+                android:layout_marginStart="5.0dip"
+                android:gravity="start"
+                android:textSize="13.0sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30.0dip"
+            android:background="@drawable/profile_complaint_fields"
+            android:orientation="horizontal"
+            android:padding="5.0dip">
+
+            <com.osm2.test_33.widget.ui.TextViewIcon
+
+                android:layout_width="wrap_content"
+                android:layout_height="50.0dip"
+                android:fontFamily="@font/flat"
+                android:gravity="start|center"
+                android:paddingEnd="20.0dip"
+                android:paddingStart="20.0dip"
+                android:text="ملاحظات"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:paddingEnd="10.0dip"
+                android:paddingStart="10.0dip"
+                android:singleLine="true"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30.0dip"
+            android:background="@drawable/profile_complaint_fields"
+            android:orientation="horizontal"
+            android:padding="5.0dip">
+
+            <com.osm2.test_33.widget.ui.TextViewIcon
+
+                android:layout_width="100dp"
+                android:layout_height="50.0dip"
+                android:fontFamily="@font/flat"
+                android:gravity="start|center"
+                android:paddingEnd="10.0dip"
+                android:paddingStart="10.0dip"
+                android:text="أضف صور"
+                android:textColor="@color/black"
+                android:textSize="15.0sp"
+                android:textStyle="bold" />
+
+            <com.github.siyamed.shapeimageview.CircularImageView
+                android:id="@+id/image_2"
+                android:layout_width="35.0dip"
+                android:layout_height="35.0dip"
+                android:layout_gravity="center_vertical|center_horizontal|center"
+                android:layout_marginRight="10dp"
+                android:foregroundGravity="bottom|center_vertical|center_horizontal|center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_add"
+                app:siBorderColor="@color/blue"
+                app:siBorderWidth="1.0dip" />
+
+           <com.github.siyamed.shapeimageview.CircularImageView
+                android:id="@+id/image_1"
+                android:layout_width="35.0dip"
+                android:layout_height="35.0dip"
+                android:layout_gravity="center_vertical|center_horizontal|center"
+                android:layout_marginRight="10dp"
+                android:foregroundGravity="bottom|center_vertical|center_horizontal|center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_add"
+                app:siBorderColor="@color/blue"
+                app:siBorderWidth="1.0dip" />
+
+            <com.github.siyamed.shapeimageview.CircularImageView
+                android:id="@+id/image_3"
+                android:layout_width="35.0dip"
+                android:layout_height="35.0dip"
+                android:layout_gravity="center_vertical|center_horizontal|center"
+                android:layout_marginRight="10dp"
+                android:foregroundGravity="bottom|center_vertical|center_horizontal|center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_add"
+                app:siBorderColor="@color/blue"
+                app:siBorderWidth="1.0dip" />
+
+            <com.github.siyamed.shapeimageview.CircularImageView
+                android:id="@+id/image_4"
+                android:layout_width="35.0dip"
+                android:layout_height="35.0dip"
+                android:layout_gravity="center_vertical|center_horizontal|center"
+                android:layout_marginRight="10dp"
+                android:foregroundGravity="bottom|center_vertical|center_horizontal|center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_add"
+                app:siBorderColor="@color/blue"
+                app:siBorderWidth="1.0dip" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="42.0dip"
+            android:layout_weight="2.0"
+            android:fontFamily="@font/flat"
+            android:gravity="center"
+            android:text="البيانات الشخصية"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textColorLink="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30.0dip"
+            android:background="@drawable/profile_complaint_fields"
+            android:orientation="horizontal"
+            android:padding="5.0dip">
+
+            <com.osm2.test_33.widget.ui.TextViewIcon
+
+                android:layout_width="wrap_content"
+                android:layout_height="50.0dip"
+                android:fontFamily="@font/flat"
+                android:gravity="start|center"
+                android:paddingEnd="20.0dip"
+                android:paddingStart="20.0dip"
+                android:text="الاسم"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/name_cust"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="الاسم الثلاثي"
+                android:imeOptions="actionNext"
+                android:paddingEnd="10.0dip"
+                android:paddingStart="10.0dip"
+                android:singleLine="true"
+                android:textColor="@color/black" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30.0dip"
+            android:background="@drawable/profile_complaint_fields"
+            android:orientation="horizontal"
+            android:padding="5.0dip">
+
+            <com.osm2.test_33.widget.ui.TextViewIcon
+
+                android:layout_width="wrap_content"
+                android:layout_height="50.0dip"
+                android:fontFamily="@font/flat"
+                android:gravity="start|center"
+                android:paddingEnd="20.0dip"
+                android:paddingStart="20.0dip"
+                android:text="البريد الالكتروني"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/email_cust"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:paddingEnd="10.0dip"
+                android:paddingStart="10.0dip"
+                android:singleLine="true"
+                android:textColor="@color/black"
+
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30.0dip"
+            android:background="@drawable/profile_complaint_fields"
+            android:orientation="horizontal"
+            android:padding="5.0dip">
+
+            <com.osm2.test_33.widget.ui.TextViewIcon
+
+                android:layout_width="wrap_content"
+                android:layout_height="50.0dip"
+                android:fontFamily="@font/flat"
+                android:gravity="start|center"
+                android:paddingEnd="20.0dip"
+                android:paddingStart="20.0dip"
+                android:text="رقم الجوال"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/phone_cust"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:paddingEnd="10.0dip"
+                android:paddingStart="10.0dip"
+                android:singleLine="true"
+                android:textColor="@color/black"
+
+                />
+
+        </LinearLayout>
+         <LinearLayout
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="30.0dip"
+             android:background="@drawable/profile_complaint_fields"
+             android:orientation="horizontal"
+             android:padding="5.0dip">
+
+             <com.osm2.test_33.widget.ui.TextViewIcon
+
+                 android:layout_width="130dp"
+                 android:layout_height="50.0dip"
+                 android:fontFamily="@font/flat"
+                 android:gravity="start|center"
+                 android:paddingEnd="10.0dip"
+                 android:paddingStart="10.0dip"
+                 android:text="أضف صورة البطاقه الشخصيه"
+                 android:textColor="@color/black"
+                 android:textSize="15.0sp"
+                 android:textStyle="bold" />
+
+             <com.github.siyamed.shapeimageview.CircularImageView
+                 android:id="@+id/image_id1"
+                 android:layout_width="35.0dip"
+                 android:layout_height="35.0dip"
+                 android:layout_gravity="center_vertical|center_horizontal|center"
+                 android:layout_marginRight="40dp"
+                 android:foregroundGravity="bottom|center_vertical|center_horizontal|center"
+                 android:scaleType="fitCenter"
+                 android:src="@drawable/ic_add"
+                 app:siBorderColor="@color/blue"
+                 app:siBorderWidth="1.0dip" />
+
+            <com.github.siyamed.shapeimageview.CircularImageView
+                 android:id="@+id/image_id2"
+                 android:layout_width="35.0dip"
+                 android:layout_height="35.0dip"
+                 android:layout_gravity="center_vertical|center_horizontal|center"
+                 android:layout_marginRight="10dp"
+                 android:foregroundGravity="bottom|center_vertical|center_horizontal|center"
+                 android:scaleType="fitCenter"
+                 android:src="@drawable/ic_add"
+                 app:siBorderColor="@color/blue"
+                 app:siBorderWidth="1.0dip" />
+
+
+
+         </LinearLayout>
+
+        <Button
+            android:id="@+id/uploading"
+            android:layout_width="fill_parent"
+            android:layout_height="45.0dip"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="70dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rounded_button_blue"
+            android:fontFamily="@font/flat"
+            android:gravity="center"
+            android:onClick="btn_send_data"
+            android:text="أرسال"
+            android:textColor="@android:color/white"
+            android:textSize="18.0sp" />
+
+    </LinearLayout>
+
+</ScrollView>
